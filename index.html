@@ -18,6 +18,20 @@
   </head>
   <body>
       <embed type="application/x-shockwave-flash" src="app.swf" width="100%" height="100%" style="position: -webkit-sticky; /* For Safari */  position:relative;  top: 0;               /* Top of viewport */  z-index: 9999;       /* Stay in front */"></embed>
+        <script>
+  function hideEveryFrame() {
+    const element = document.getElementById('splash-screen');
+    if (element) {
+      // Force display to none every single frame
+      element.style.display = 'none';
+    }
+    // Request the next frame
+    requestAnimationFrame(hideEveryFrame);
+  }
+
+  // Start the frame loop
+  requestAnimationFrame(hideEveryFrame);
+</script>
   
 
 </body>
